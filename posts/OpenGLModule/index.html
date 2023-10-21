@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>OpenGL</title>
+        <meta name="description" content="One of the second year modules at university was graphics rendering where I got to learn about different rendering techniques like hierarchical modelling, matrix transformations and manipulation, lighting, shadows, stencil buffer and creating a skybox.">
+        <meta name="generator" content="Eleventy v2.0.1">
+        <link rel="stylesheet" href="/styles/style.css">
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
+        </style>
+		
+
+    </head>
+    <body class = "theme">
+        <header class="container">
+            <a href="/" class="home-link"></a>
+			<nav>
+				<h2 class="visually-hidden">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item"><a href="/">Home</a></li>
+					<li class="nav-item"><a href="/about/">About</a></li>
+				</ul>
+			</nav>
+        </header>
+        <main class = "main">
+            <h1>OpenGL</h1>
+            <link rel="stylesheet" href="/styles/post.css">
+ <div class="PostHeader">
+One of the second year modules at university was graphics rendering where I got to learn about different rendering techniques like hierarchical modelling, matrix transformations and manipulation, lighting, shadows, stencil buffer and creating a skybox.
+</div> 
+<div class = "seperator" style = "margin: 20px"> </div>
+
+
+
+<div class="PageContent">
+<script src="../../scripts/slideshow.js"></script>
+<div class="postSectionLeft">
+    <video class="postSectionImg" controls style="border-radius: 3px;">
+        <source src = "../../videos/2nd_Year_Graphics_Project.mp4" type="video/mp4">
+        Video not supported
+    </video>
+    <p>This is the project I had to create for one of my 2nd year modules while at Abertay University. The module was an introduction into graphics pogramming and the application was made using OpenGl and demonstrates some simple graphics rendering techniques.
+    The scene makes use of several lighting methods, stencil buffers for the start and the reflection, shadows, loaded models, texturing, different filtering techniques, procedural mesh generation and different cameras with different controls.</p>
+    <div class="mySlides">
+        <div class= "postSlideContent">
+            <img class="postSlideContent" src="../../images/OpenGL/flashlight_orig.png">
+        </div>
+    </div>
+    <div class="mySlides">
+        <div class= "postSlideContent">
+            <img class="postSlideContent" src="../../images/OpenGL/reflections_orig.png">
+        </div>
+    </div>
+    <div class="mySlides">
+        <div class= "postSlideContent">
+            <img class="postSlideContent" src="../../images/OpenGL/secondcamera_orig.png">
+        </div>
+    </div>
+    <div class="mySlides">
+        <div class= "postSlideContent">
+            <img class="postSlideContent" src="../../images/OpenGL/transparency_orig.png">
+        </div>
+    </div>
+
+</div>
+<div class="highlightControls">
+    <button class="highlightLeft" onclick="plusDivs(-1)">&#10094;</button>
+    <span class="highlightDot" onClick="currentSlide(1)"></span>
+    <span class="highlightDot" onClick="currentSlide(2)"></span>
+    <span class="highlightDot" onClick="currentSlide(3)"></span>
+    <span class="highlightDot" onClick="currentSlide(4)"></span>
+    <button class="highlightRight" onclick="plusDivs(+1)">&#10095;</button>
+</div>
+
+<script>
+    carousel();
+</script>
+</div>
+        </main>
+    </body>
+</html>

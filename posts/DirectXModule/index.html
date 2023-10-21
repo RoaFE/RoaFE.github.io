@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DirectX</title>
+        <meta name="description" content="One of my third year modules was graphics programming in DirectX. Provided with a flexible framework to work I created a variety of vertex, hull, domain, geometry and pixel shaders. With these shaders vertex manipulation, dynamic tessellation, particle effects, post processing and lighting were all performed and demonstrated.">
+        <meta name="generator" content="Eleventy v2.0.1">
+        <link rel="stylesheet" href="/styles/style.css">
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
+        </style>
+		
+
+    </head>
+    <body class = "theme">
+        <header class="container">
+            <a href="/" class="home-link"></a>
+			<nav>
+				<h2 class="visually-hidden">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item"><a href="/">Home</a></li>
+					<li class="nav-item"><a href="/about/">About</a></li>
+				</ul>
+			</nav>
+        </header>
+        <main class = "main">
+            <h1>DirectX</h1>
+            <link rel="stylesheet" href="/styles/post.css">
+ <div class="PostHeader">
+One of my third year modules was graphics programming in DirectX. Provided with a flexible framework to work I created a variety of vertex, hull, domain, geometry and pixel shaders. With these shaders vertex manipulation, dynamic tessellation, particle effects, post processing and lighting were all performed and demonstrated.
+</div> 
+<div class = "seperator" style = "margin: 20px"> </div>
+
+
+
+<div class="PageContent">
+<script src="../../scripts/slideshow.js"></script>
+<div class="postSectionLeft">
+    <video class="postSectionImg" controls style="border-radius: 3px;">
+        <source src = "../../videos/Graphics_Programming_With_Shaders.mp4" type="video/mp4">
+        Video not supported
+    </video>
+    <p>The scene consists of a central sphere in with a particle system surrounding it, with a controllable wave system which propagates around the sphere. In front of the sphere is a plane where a post processing technique (kuwahara filter) can be demonstrated on a texture. The post processing technique can also be applied to the whole scene and the effect can be controlled in the GUI. To the left the sphere is another plane demonstrating dynamic tessellation on a manipulated height map. The tessellation and manipulation values of this plane can also be controlled within the GUI. Two point lights that can be toggled into spot lights are rotating around the middle casting a shadow onto a flat plane below with their attenuation and if a spotlight their exponent being adjusted.</p>
+    <div class="mySlides">
+        <div class= "postSlideContent">
+            <img class="postSlideContent" src="../../images/DirectX/dynamictesselation_orig.png">
+        </div>
+    </div>
+    <div class="mySlides">
+        <div class= "postSlideContent">
+            <img class="postSlideContent" src="../../images/DirectX/kuwarahafilterzeroradius_orig.png">
+        </div>
+    </div>
+    <div class="mySlides">
+        <div class= "postSlideContent">
+            <img class="postSlideContent" src="../../images/DirectX/kuwarahafilterthreeradius_orig.png">
+        </div>
+    </div>
+    <div class="mySlides">
+        <div class= "postSlideContent">
+            <img class="postSlideContent" src="../../images/DirectX/lighting-and-shadows_orig.png">
+        </div>
+    </div>
+    <div class="mySlides">
+        <div class= "postSlideContent">
+            <img class="postSlideContent" src="../../images/DirectX/wave-manipulation_orig.png">
+        </div>
+    </div>
+
+</div>
+    <div class="highlightControls">
+        <button class="highlightLeft" onclick="plusDivs(-1)">&#10094;</button>
+        <span class="highlightDot" onClick="currentSlide(1)"></span>
+        <span class="highlightDot" onClick="currentSlide(2)"></span>
+        <span class="highlightDot" onClick="currentSlide(3)"></span>
+        <span class="highlightDot" onClick="currentSlide(4)"></span>
+        <span class="highlightDot" onClick="currentSlide(5)"></span>
+        <button class="highlightRight" onclick="plusDivs(+1)">&#10095;</button>
+    </div>
+
+<script>
+    carousel();
+</script>
+</div>
+        </main>
+    </body>
+</html>

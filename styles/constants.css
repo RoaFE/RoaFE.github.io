@@ -1,0 +1,52 @@
+:root
+{
+    --padding: 8px;
+    --half-padding: 4px;
+    --margin: 16px;
+    --border-thickness: 2px;
+    --main-colour: #008080;
+    --main-colour-off: #005050;
+    --secondary-colour: #fffcdb;
+    --secondary-colour-off: #f8f5d4;
+}
+
+@media screen and (min-width : 100px)
+{
+    :root
+    {
+        --content-width: 95%;
+        --content-secondary-width: 85%;
+    }
+}
+@media screen and (min-width : 400px)
+{
+    :root
+    {
+        --content-width: 95%;
+        --content-secondary-width: 85%;
+    }
+}
+@media screen and (min-width : 700px)
+{
+    :root
+    {
+        --content-width: 77%;
+        --content-secondary-width: 66%;
+    }
+}
+@media screen and (min-width : 1000px)
+{
+    :root
+    {
+        --content-width: 66%;
+        --content-secondary-width: 55%;
+    }
+}
+@media screen and (min-width : 1300px)
+{
+    :root
+    {
+        --content-width: 44%;
+        --content-secondary-width: 33%;
+    }
+}

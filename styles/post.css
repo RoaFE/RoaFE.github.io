@@ -1,0 +1,77 @@
+@import './constants.css';
+
+
+.PostHeader
+{
+    height: auto;
+    width: var(--content-width);
+    margin-top: var(--margin);
+}
+
+.PostContent
+{
+    width: var(--content-width);
+}
+
+.PostImg
+{
+    margin: var(--margin);
+    max-height: 100%;
+    max-width: 80%;
+    flex-shrink: 2;
+    object-fit: contain;
+}
+
+.postSectionLeft
+{
+    /* margin: var(--margin); */
+    width: var(--content-width);
+    /* border: solid var(--border-thickness);
+    border-radius: 3px; */
+    padding: var(--padding);
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.postSectionImgBarDiv
+{
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+}
+.postSectionImgBarDiv div
+{
+    flex: 1;
+}
+.postSectionImgBar
+{
+    padding: var(--padding);
+    border-radius: 3px;
+    max-width:100%;
+}
+.postSectionImgLeft
+{
+    float: left;
+    margin: var(--margin);
+    max-width: 50%;
+}
+.postSectionImgRight
+{
+    float: right;
+    margin: var(--margin);
+    max-width: 50%;
+}
+.postSectionImg
+{
+    display: block;
+    margin: var(--margin);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80%;
+}
+
+.postSlideContent
+{
+    align-self: center;
+    width: auto;
+    height: 100%;
+}

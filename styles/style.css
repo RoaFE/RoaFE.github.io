@@ -1,0 +1,341 @@
+@import './constants.css';
+* {
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif, monospace;
+}
+
+
+p {
+    overflow-wrap: break-word;
+}
+
+h2 {
+    margin: 0;
+}
+
+h1,
+h3 {
+    margin: 0;
+    margin-top: var(--margin);
+}
+
+header:after {
+    content: "";
+    clear: both;
+}
+
+/* Header */
+header {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: flex;
+    gap: 1em .5em;
+    flex-wrap: wrap;
+    padding: var(--padding);
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    background-color: var(--secondary-colour);
+    border-bottom: var(--border-thickness) solid;
+}
+
+
+.home-link {
+    font-size: 1em;
+    /* 16px /16 */
+    font-weight: 700;
+    margin-right: var(--margin);
+}
+
+.home-link:link:not(:hover) {
+    text-decoration: none;
+}
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.seperator
+{
+    width: 100%;
+    border-bottom: var(--main-colour) solid var(--border-thickness);
+}
+
+/* Nav */
+.nav {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.nav-item {
+    margin-right: var(--margin);
+}
+
+.nav-item a[href]:not(:hover) {
+    color: var(--main-colour);
+    text-decoration: none;
+}
+.nav-item a[href]:visited {
+    color: var(--main-colour);
+    text-decoration: none;
+}
+.nav-item a[href] :hover {
+    color: var(--main-colour-off);
+}
+
+.nav a[href][aria-current="page"] {
+    text-decoration: underline;
+    color: var(--main-colour-off);
+}
+
+html,
+body {
+    height: 100%;
+}
+
+html {
+    margin: var(--margin);
+    /* display: table; */
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.PageContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* About */
+
+.About {
+    margin-top: var(--margin);
+    background-color: var(--secondary-colour-off);
+    outline: var(--border-thickness) solid;
+    padding: var(--padding);
+    border-radius: 3px;
+    display: flex;
+    align-items:flex-start;
+    width: var(--content-secondary-width);
+}
+
+.About p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.AboutImg {
+    max-height: 30%;
+    max-width: 30%;
+    flex-shrink: 2;
+    object-fit: contain;
+}
+
+.Bio {
+    overflow-wrap: normal;
+    margin-left: var(--margin);
+    display: flex;
+    margin-block-start: 0%;
+    margin-block-end: 0%;
+    align-items: center;
+}
+
+
+/* SlideShow / Highlights */
+.highlights{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    width: var(--content-width);
+    margin: var(--margin);
+    margin-bottom: 0;
+}
+
+.slideContent
+{
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mySlides
+{
+    position: relative;
+    width: 100%;
+    height: 300px;
+    border-radius: 3px;
+    border: var(--border-thickness) solid;
+    padding: var(--padding);
+    background-color: var(--secondary-colour-off);
+    justify-content: center;
+    align-content: center;
+}
+
+.mySlides a[href]:not(:hover) {
+    text-decoration: none;
+    color:var(--main-colour);
+}
+.mySlides:visited {
+    text-decoration: none;
+    color:var(--main-colour);
+}
+
+.highlightImage
+{
+    max-height: 100%;
+    max-width: 60%;
+    flex-shrink: 2;
+    object-fit: contain;
+}
+.highlightContent
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
+    text-overflow: ellipsis;
+    overflow-y: clip;
+    overflow: hidden;
+    white-space: normal;
+    margin-left: var(--margin);
+    height: 100%;
+}
+.highlightControls
+{
+    padding: var(--padding);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.highlightDot
+{
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    background-color: var(--main-colour);
+    border-radius: 3px;
+    transition: background-color 0.6s ease;
+    margin: var(--half-padding);
+}
+.highlightLeft,
+.highlightRight
+{
+    cursor: pointer;
+    background-color: var(--main-colour);
+    color: var(--secondary-colour);
+    transition: background-color 0.6s ease;
+    border-radius: 3px;
+    border: 0px;
+    margin: var(--half-padding);
+}
+
+.highlightLeft:hover,
+.highlightRight:hover
+{
+    background-color: var(--main-colour-off);
+}
+.active,
+.highlightDot:hover {
+    background-color: var(--main-colour-off);
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* Posts */
+
+.postContent{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+}
+.postContent h2 {
+    margin-bottom: var(--padding);
+}
+
+.postContent p {
+    margin: 0;
+    margin-left: var(--padding);
+}
+.post{
+    background-color: var(--secondary-colour-off);
+    margin: var(--margin) var(--half-padding) var(--half-padding) var(--margin);
+    padding: var(--padding);
+    margin-bottom: 0px;
+    outline: var(--border-thickness) solid;
+    border-radius: 3px; 
+    width: var(--content-width);
+    height: 300px;
+    position: relative;
+    overflow-y: clip;
+
+}
+.postLink
+{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+
+.postImage
+{
+    max-height: 100%;
+    max-width: 60%;
+    flex-shrink: 2;
+    object-fit: contain;
+}
+.postText
+{
+    display: flex;
+        flex-direction: row;
+    overflow-y: clip;
+}
+.postSection {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
+
+.theme {
+    color: var(--main-colour);
+    background-color: var(--secondary-colour);
+}

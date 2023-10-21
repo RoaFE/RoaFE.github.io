@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dung Battles</title>
+        <meta name="description" content="Dung battles is a party game about competeting dung beetles battling it out for the most dung. This was a game I worked on for Tranfuzer 2021 as part of the team Zero Qualms.">
+        <meta name="generator" content="Eleventy v2.0.1">
+        <link rel="stylesheet" href="/styles/style.css">
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
+        </style>
+		
+
+    </head>
+    <body class = "theme">
+        <header class="container">
+            <a href="/" class="home-link"></a>
+			<nav>
+				<h2 class="visually-hidden">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item"><a href="/">Home</a></li>
+					<li class="nav-item"><a href="/about/">About</a></li>
+				</ul>
+			</nav>
+        </header>
+        <main class = "main">
+            <h1>Dung Battles</h1>
+            <link rel="stylesheet" href="/styles/post.css">
+ <div class="PostHeader">
+Dung battles is a party game about competeting dung beetles battling it out for the most dung. This was a game I worked on for Tranfuzer 2021 as part of the team Zero Qualms.
+</div> 
+<div class = "seperator" style = "margin: 20px"> </div>
+
+
+
+<div class="PageContent">
+
+<div class="postSectionLeft">
+<video class="postSectionImgLeft" controls style="border-radius: 3px;">
+    <source src = "../../videos/ZeroQualms_GameTrailer.mp4" type="video/mp4">
+    Video not supported
+</video>
+<h2>What is DungBattles?</h2>
+<p>Dung battles is a local party game where players battle it out to collect the most dung before the time runs out. Roll, Climb, Glide, Steal and Flip your way to victory against up to 3 other players.</p>
+<h2>My Role</h2>
+<p> As one of three programmers on the project I was responsible mainly for the character controller and camera. Along with traditional movement the beetle could also climb surfaces and glide which presented some interesting challenges. A key feature of the gameplay was being able to "flip" other beetles and actual dungbeetles do to force players away from your nest and flip them off of any dung they are rolling. I was also responsible for the implementation of the animations using animation blending and animation masks as the beetle could expand it's wings when the player prompted. </p>
+<video class="postSectionImgRight" controls style="border-radius: 3px;">
+    <source src = "../../videos/DungBattle_MultiPlayer.mp4" type="video/mp4">
+    Video not supported
+</video>
+<p>As I was responsible for character controls I opted to try the new (at the time) Unity Input system as we were aiming for keyboard and mouse and controller support. The new input system also had the capability to support additional input systems for other players so I ended up also working on the local multiplayer side of things including the pregame lobby and split screen within the actual game.</p>
+<p>Sadly dungbattles wasn't chosen for further funding at the end of Tranfuzer and the team went their seperate ways onto new projects, jobs and adventures</p>
+</div>
+
+
+</div>
+        </main>
+    </body>
+</html>

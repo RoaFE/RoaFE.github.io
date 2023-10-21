@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Animation Systems</title>
+        <meta name="description" content="One of the modules at university was oreintated around animation programming and systems for 2D and 3D.">
+        <meta name="generator" content="Eleventy v2.0.1">
+        <link rel="stylesheet" href="/styles/style.css">
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
+        </style>
+		
+
+    </head>
+    <body class = "theme">
+        <header class="container">
+            <a href="/" class="home-link"></a>
+			<nav>
+				<h2 class="visually-hidden">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item"><a href="/">Home</a></li>
+					<li class="nav-item"><a href="/about/">About</a></li>
+				</ul>
+			</nav>
+        </header>
+        <main class = "main">
+            <h1>Animation Systems</h1>
+            <link rel="stylesheet" href="/styles/post.css">
+ <div class="PostHeader">
+One of the modules at university was oreintated around animation programming and systems for 2D and 3D.
+</div> 
+<div class = "seperator" style = "margin: 20px"> </div>
+
+
+
+<div class="PageContent">
+<div class="postSectionLeft">
+    <p>For the animation programming module we learned a variety of techniques that were then combined and implemented in a final application to demonstrate our understanding and evaluate our implementation. The application can be split into two parts, 2D and 3D, for easier discussion.</b>
+    <h2>2D</h2>
+    <p>The 2D part of the application involves animated sprite sheets and 2D bone animations. The application reads in all relevant bone / sprite sheet data and processes them according to their type to be loaded and viewed. The user can then use the drop down menu to select from the 2D animations loaded in.</p>
+    <video class="postSectionImg" controls style="border-radius: 3px;">
+        <source src = "../../videos/2D-Animation.mp4" type="video/mp4">  
+    </video>
+    <h2>3D</h2>
+    <p>The 3D part of the application involves a mixamo model with some mixamo animations that are loaded in and rigged. From this you can build an animation tree through the use of nodes. These nodes can be linked up through their input and outputs to create a complex animation system dependant on conditions and variables. There are a variety of nodes demonstrating different animation techniques as detailed below:</p>
+    <video class="postSectionImg" controls style="border-radius: 3px;">
+        <source src = "../../videos/3D-Animation.mp4" type="video/mp4">  
+    </video>
+    <h4>Clip Node</h4>
+    <p>The most basic node, it just reads in a given animation clip and plays it accordingly.</p>
+    <h4>Linear Blend Node</h4>
+    <p>Given two input nodes will linearly blend (lerp) between them based on a given value between 0 and 1.</p>
+    <h4>2D Linear Blend Node</h4>
+    <p>Similar to the Linear blend node but blends between 4 clips, think of it as a blend of 2 linear blend nodes.</p>
+    <h4> Transition Node</h4>
+    <p>Transitions from one input to the second input over a specified time if specified conditions are met.</p>
+    <h4>Partial Blend Node</h4>
+    <p>Same as a linear blend node, however a bone mask can be specified and the blend between two inputs will only be applied to the bones specified within the mask.</p>
+    <h4>RagDoll Node</h4>
+    <p>As with the Partial Blend Node a bone mask can be specified and once toggled on those bones will "RagDoll" and experience gravity.</p>
+    <h4>IK Node</h4>
+    <p>Just as above a bone mask can be specified, once specified you can move and pose the specified bones through the use of Inverse Kinematics.</p>
+</div>
+</div>
+        </main>
+    </body>
+</html>

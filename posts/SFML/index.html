@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SFML Game</title>
+        <meta name="description" content="One of the first games I ever made during 1st year of university was a simple 2D wave based survival game made with SFML.">
+        <meta name="generator" content="Eleventy v2.0.1">
+        <link rel="stylesheet" href="/styles/style.css">
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
+        </style>
+		
+
+    </head>
+    <body class = "theme">
+        <header class="container">
+            <a href="/" class="home-link"></a>
+			<nav>
+				<h2 class="visually-hidden">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item"><a href="/">Home</a></li>
+					<li class="nav-item"><a href="/about/">About</a></li>
+				</ul>
+			</nav>
+        </header>
+        <main class = "main">
+            <h1>SFML Game</h1>
+            <link rel="stylesheet" href="/styles/post.css">
+ <div class="PostHeader">
+One of the first games I ever made during 1st year of university was a simple 2D wave based survival game made with SFML.
+</div> 
+<div class = "seperator" style = "margin: 20px"> </div>
+
+
+
+<div class="PageContent">
+<div class="postSectionLeft">
+    <video class="postSectionImg" controls style="border-radius: 3px;">
+        <source src = "../../videos/SFML.mp4" type="video/mp4">
+        Video not supported
+    </video>
+    <img class="postSectionImgLeft" src="../../images/SFML/SFMLTitle.jpg" style="border-radius: 3px;">
+    <p>Towards the end of first year we learnt SFML and were tasked with making a game at the end. The game I made was a survival 2D game. It features hitboxes, music and sfx, a wave system, tilemap, sprite sheet and animations, enemy pathfinding. </p>
+    <p>The project is setup with several game states that the game switches between. Utilises a sprite sheet for different animations including running, jumping, dodging and attacking.</p>
+    <p>The game is very simple and the code upon looking back isn't anywhere near perfect but this game has a special place in my heart as it's the first game I'd made from scratch in c++. It also helps put in perspective how far I've come since making it and provides good lessons on what to do or not to do when creating a game especially from a code structure stand point (and a UX standpoint).</p>
+    <img class="postSectionImgRight" src="../../images/SFML/SFMLHit.jpg" style="border-radius: 3px;">
+    <p>I remember one of the biggest challenges was getting the tile collisions to work properly as there were some platforms you could jump and drop down through. I remember coming up with several solutions and always finding edge cases or problems with my chosen collisions solutuion.</p>
+    <p>The game uses a tile sheet system to build the level where I could define what tiles should appear where in a simple 2D array defined in code</p>
+</div>
+</div>
+        </main>
+    </body>
+</html>
