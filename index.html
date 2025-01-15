@@ -21,6 +21,7 @@
 				<ul class="nav">
 					<li class="nav-item"><a href="/" aria-current="page">Home</a></li>
 					<li class="nav-item"><a href="/about/">About</a></li>
+					<li class="nav-item"><a href="/projects/">Projects</a></li>
 				</ul>
 			</nav>
         </header>
@@ -32,14 +33,24 @@
     <img src="images/headshot.jpg" alt="Head shot of me" class="AboutImg">
     <p class="Bio">Hey I'm Rowan, I'm 24 and currently live in Glasgow, Scotland. I'm a Games programmer and on this website you can checkout some of the projects I've worked on, hope you find it interesting and cool! If you want to learn more about me check out the About page!</p>
 </div>
+<h1>Highlights</h1>
 <script src="scripts/slideshow.js"></script>
 <div class="highlights">
     
     <div class="mySlides">
-        <div class= "slideContent">
-            <img class="highlightImage" src="../../images/N_Body/AbertayDissProject.png">
-            <div class="highlightContent">
-                <h2>N-Body (Undergrad Dissertation project)</h2>
+        <div class= "diss">
+        <style>
+        .diss {
+            background-image: url("../../images/N_Body/AbertayDissProject.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            display: flex;
+        }
+        </style>
+            <div class =  "slideContent"> 
+                <h1>N-Body (Undergrad Dissertation project)</h1> 
                 <p>Fourth year Honours Project investigating the feasability of adding collisions and rotations into an N-Body Simulation.</p>
             </div>
         </div>
@@ -48,10 +59,19 @@
     </div>
     
     <div class="mySlides">
-        <div class= "slideContent">
-            <img class="highlightImage" src="../../images/DungBattlesLogo.png">
-            <div class="highlightContent">
-                <h2>Dung Battles</h2>
+        <div class= "dungbattles">
+        <style>
+        .dungbattles {
+            background-image: url("../../images/DungBattlesLogo.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            display: flex;
+        }
+        </style>
+            <div class =  "slideContent"> 
+                <h1>Dung Battles</h1> 
                 <p>Dung battles is a party game about competeting dung beetles battling it out for the most dung. This was a game I worked on for Tranfuzer 2021 as part of the team Zero Qualms.</p>
             </div>
         </div>
@@ -60,10 +80,19 @@
     </div>
     
     <div class="mySlides">
-        <div class= "slideContent">
-            <img class="highlightImage" src="../../images/Nesta_VHNC_2/District.jpg">
-            <div class="highlightContent">
-                <h2>Nesta Playbox</h2>
+        <div class= "nestaPlaybox">
+        <style>
+        .nestaPlaybox {
+            background-image: url("../../images/Nesta_VHNC_2/District.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            display: flex;
+        }
+        </style>
+            <div class =  "slideContent"> 
+                <h1>Nesta Playbox</h1> 
                 <p>A digital twin of Glasgow aimed at modelling the food environment within the city and examing how interventions could change it.</p>
             </div>
         </div>
@@ -72,10 +101,19 @@
     </div>
     
     <div class="mySlides">
-        <div class= "slideContent">
-            <img class="highlightImage" src="../../images/Nesta_VHNC_1/NestaTitle.png">
-            <div class="highlightContent">
-                <h2>Nesta VHNC</h2>
+        <div class= "NestVHNC">
+        <style>
+        .NestVHNC {
+            background-image: url("../../images/Nesta_VHNC_1/NestaTitle.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            display: flex;
+        }
+        </style>
+            <div class =  "slideContent"> 
+                <h1>Nesta VHNC</h1> 
                 <p>Nesta is a UK based innovation agency for social good. We partnered with Nesta to help them with one of their current major objectives in the UK, reducing obesity by half in the UK by 2030.</p>
             </div>
         </div>
@@ -84,10 +122,19 @@
     </div>
     
     <div class="mySlides">
-        <div class= "slideContent">
-            <img class="highlightImage" src="../../images/ProjectHighlands/Cover.png">
-            <div class="highlightContent">
-                <h2>Project Highlands Prototype</h2>
+        <div class= "projectHighlands">
+        <style>
+        .projectHighlands {
+            background-image: url("../../images/ProjectHighlands/Cover.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            display: flex;
+        }
+        </style>
+            <div class =  "slideContent"> 
+                <h1>Project Highlands Prototype</h1> 
                 <p>A prototype for an original IP from Konglomerate games about exploring the scottish highlands.</p>
             </div>
         </div>
@@ -113,190 +160,6 @@
     <button class="highlightRight" onclick="plusDivs(+1)">&#10095;</button>
 </div>
 </div>
-
-<div class = "seperator" style = "margin: 20px"> </div>
-<h2>Professional Projects</h2>
-<div class = "postSection">
-    <div class="post">
-        <div class="postContent">
-            <h2>Dung Battles</h2>
-            <div class="postText">
-            <img class="postImage" src="../../images/DungBattlesLogo.png">
-            <p> Dung battles is a party game about competeting dung beetles battling it out for the most dung. This was a game I worked on for Tranfuzer 2021 as part of the team Zero Qualms. </p>
-            </div>
-        </div>
-        <a href="/posts/DungBattles/" class = "postLink">
-        </a>
-    </div>
-    <div class="post">
-        <div class="postContent">
-            <h2>Nesta Playbox</h2>
-            <div class="postText">
-            <img class="postImage" src="../../images/Nesta_VHNC_2/District.jpg">
-            <p> A digital twin of Glasgow aimed at modelling the food environment within the city and examing how interventions could change it. </p>
-            </div>
-        </div>
-        <a href="/posts/NestaPlaybox/" class = "postLink">
-        </a>
-    </div>
-    <div class="post">
-        <div class="postContent">
-            <h2>Nesta VHNC</h2>
-            <div class="postText">
-            <img class="postImage" src="../../images/Nesta_VHNC_1/NestaTitle.png">
-            <p> Nesta is a UK based innovation agency for social good. We partnered with Nesta to help them with one of their current major objectives in the UK, reducing obesity by half in the UK by 2030. </p>
-            </div>
-        </div>
-        <a href="/posts/NestaPrototype/" class = "postLink">
-        </a>
-    </div>
-    <div class="post">
-        <div class="postContent">
-            <h2>Project Highlands Prototype</h2>
-            <div class="postText">
-            <img class="postImage" src="../../images/ProjectHighlands/Cover.png">
-            <p> A prototype for an original IP from Konglomerate games about exploring the scottish highlands. </p>
-            </div>
-        </div>
-        <a href="/posts/ProjectHighland/" class = "postLink">
-        </a>
-    </div>
-</div>
-<div class = "seperator" style = "margin: 20px"> </div>
-<h2>Game Jams</h2>
-<div class = "postSection">
-        <div class="post">
-            <div class="postContent">
-                <h2>Global Game Jam 2019</h2>
-                <div class="postText">
-                <img class="postImage" src="../../images/GGJ2019/screenshot-5_orig.png">
-                <p> A little game where you play as a bird looking to kit out their nest. Created for Global Game Jam 2019. </p>
-                </div>
-            </div>
-            <a href="/posts/GlobalGameJam2019/" class = "postLink">
-            </a>
-        </div>
-        <div class="post">
-            <div class="postContent">
-                <h2>Global Game Jam 2020</h2>
-                <div class="postText">
-                <img class="postImage" src="../../images/GGJ2020/DoktorHammersIcon.png">
-                <p> In this rapid Russian repair game, you must use your possessed magical healing hammer to fix as many of your grandmother&#39;s broken possessions as quick as you possibly can using a physical hammer in real life. </p>
-                </div>
-            </div>
-            <a href="/posts/GlobalGameJam2020/" class = "postLink">
-            </a>
-        </div>
-        <div class="post">
-            <div class="postContent">
-                <h2>AGDS Spooky game jam</h2>
-                <div class="postText">
-                <img class="postImage" src="../../images/SpookyDoor/Icon.png">
-                <p> Spooky Game made for the Abertay Game Development Society spooky jam </p>
-                </div>
-            </div>
-            <a href="/posts/SpookyDoor/" class = "postLink">
-            </a>
-        </div>
-</div>
-<div class = "seperator" style = "margin: 20px"> </div>
-<h2>University</h2>
-<div class = "postSection">
-        <div class="post">
-            <div class="postContent">
-                <h2>N-Body (Undergrad Dissertation project)</h2>
-                <div class="postText">
-                <img class="postImage" src="../../images/N_Body/AbertayDissProject.png">
-                <p> Fourth year Honours Project investigating the feasability of adding collisions and rotations into an N-Body Simulation. </p>
-                </div>
-            </div>
-            <a href="/posts/AbertayDissertation/" class = "postLink">
-            </a>
-        </div>
-        <div class="post">
-            <div class="postContent">
-                <h2>DirectX</h2>
-                <div class="postText">
-                <img class="postImage" src="../../images/DirectX/scene-as-a-whole_orig.png">
-                <p> One of my third year modules was graphics programming in DirectX. Provided with a flexible framework to work I created a variety of vertex, hull, domain, geometry and pixel shaders. With these shaders vertex manipulation, dynamic tessellation, particle effects, post processing and lighting were all performed and demonstrated. </p>
-                </div>
-            </div>
-            <a href="/posts/DirectXModule/" class = "postLink">
-            </a>
-        </div>
-        <div class="post">
-            <div class="postContent">
-                <h2>OpenGL</h2>
-                <div class="postText">
-                <img class="postImage" src="../../images/OpenGL/secondcamera_orig.png">
-                <p> One of the second year modules at university was graphics rendering where I got to learn about different rendering techniques like hierarchical modelling, matrix transformations and manipulation, lighting, shadows, stencil buffer and creating a skybox. </p>
-                </div>
-            </div>
-            <a href="/posts/OpenGLModule/" class = "postLink">
-            </a>
-        </div>
-        <div class="post">
-            <div class="postContent">
-                <h2>SFML Game</h2>
-                <div class="postText">
-                <img class="postImage" src="../../images/SFML/SFMLAttack.jpg">
-                <p> One of the first games I ever made during 1st year of university was a simple 2D wave based survival game made with SFML. </p>
-                </div>
-            </div>
-            <a href="/posts/SFML/" class = "postLink">
-            </a>
-        </div>
-        <div class="post">
-            <div class="postContent">
-                <h2>Animation Systems</h2>
-                <div class="postText">
-                <img class="postImage" src="../../images/Animation/Running.png">
-                <p> One of the modules at university was oreintated around animation programming and systems for 2D and 3D. </p>
-                </div>
-            </div>
-            <a href="/posts/Animation/" class = "postLink">
-            </a>
-        </div>
-</div>
-<div class = "seperator" style = "margin: 20px"> </div>
-<h2>Personal</h2>
-<div class = "postSection">
-        <div class="post">
-            <div class="postContent">
-                <h2>Sound Sphere</h2>
-                <div class="postText">
-                <img class="postImage" src="../../images/SoundSphere/SoundSphere.png">
-                <p> Fun side project experimenting with the layering of waves </p>
-                </div>
-            </div>
-            <a href="/posts/SoundSphere/" class = "postLink">
-            </a>
-        </div>
-        <div class="post">
-            <div class="postContent">
-                <h2>OpenGL Renderer</h2>
-                <div class="postText">
-                <img class="postImage" src="../../images/OpenGLPersonal/Model loading.png">
-                <p> A hobbiest basic OpenGL renderer for experimenting and learning. </p>
-                </div>
-            </div>
-            <a href="/posts/OpenGlRenderer/" class = "postLink">
-            </a>
-        </div>
-        <div class="post">
-            <div class="postContent">
-                <h2>This Website</h2>
-                <div class="postText">
-                <img class="postImage" src="../../images/Website/Home.png">
-                <p> The very website you&#39;re viewing this on! Created from scratch to learn about static web development and display my ability to adapt and learn new technologies/languages. </p>
-                </div>
-            </div>
-            <a href="/posts/Website/" class = "postLink">
-            </a>
-        </div>
-</div>
-
-<div class = "seperator" style = "margin: 20px"> </div>
 </div>
 <script>
     carousel();
