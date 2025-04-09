@@ -20,16 +20,19 @@
 				<h2 class="visually-hidden">Top level navigation menu</h2>
 				<ul class="nav">
 					<li class="nav-item"><a href="/">Home</a></li>
-					<li class="nav-item"><a href="/about/">About</a></li>
 					<li class="nav-item"><a href="/projects/">Projects</a></li>
+					<li class="nav-item"><a href="/about/">About</a></li>
 				</ul>
 			</nav>
         </header>
         <main class = "main">
             <h1>Sound Sphere</h1>
             <link rel="stylesheet" href="/styles/post.css">
- <div class="PostHeader">
+<div class="PostHeader">
+<h2>Overview</h2>
+<div class = "seperator" style = "margin: 4px"> </div>
 Fun side project experimenting with the layering of waves
+Created in C++ with SFML a simple visualiser of waves that propogate around a circle.
 </div> 
 <div class = "seperator" style = "margin: 20px"> </div>
 
@@ -38,6 +41,7 @@ Fun side project experimenting with the layering of waves
 <div class="PageContent">
 <div class="postSectionLeft">
 
+<p>During my graphics project in third year I propagated a wave round a sphere. I really enjoyed the way the sphere moved and changed depending on the values you set. I wanted to continue something along these lines so I created something similar in 2D but now with the added ability to add multiple waves. This can visualise constructive and deconstruction interference. </p>
  <div class="postSectionImgBarDiv">
     <div>
         <img class="postSectionImgBar" src="../../images/SoundSphere/SoundSphere2.png">
@@ -46,7 +50,8 @@ Fun side project experimenting with the layering of waves
         <img class="postSectionImgBar" src="../../images/SoundSphere/SoundSphere3.png">
     </div>
 </div>
-<p>During my graphics project in third year I propagated a wave round a sphere. I really enjoyed the way the sphere moved and changed depending on the values you set. I wanted to continue something along these lines so I created something similar in 2D but now with the added ability to add multiple waves. This can visualise constructive and deconstruction interference. It is still a work in progress but my plans for the project were to eventually add sounds and key presses that send single waves through the circle like a note being played on a key board for example. Sadly I ended up shelving the project but may come back and do more with it one day.</p>
+<p>I created it using SFML in C++ and it works by procedurally constructying a circle each frame. This circle calculates the position vertices based on the wave information defined by the user in the program. </p>
+<p>It is still a work in progress but my plans for the project were to eventually add sounds and key presses that send single waves through the circle like a note being played on a key board for example. I also wished to move the processing from the CPU to the GPU through the use of a vertex shader. Sadly I ended up shelving the project but may come back and do more with it one day.</p>
 
 </div>
 </div>

@@ -20,16 +20,19 @@
 				<h2 class="visually-hidden">Top level navigation menu</h2>
 				<ul class="nav">
 					<li class="nav-item"><a href="/">Home</a></li>
-					<li class="nav-item"><a href="/about/">About</a></li>
 					<li class="nav-item"><a href="/projects/">Projects</a></li>
+					<li class="nav-item"><a href="/about/">About</a></li>
 				</ul>
 			</nav>
         </header>
         <main class = "main">
             <h1>Nesta Playbox</h1>
             <link rel="stylesheet" href="/styles/post.css">
- <div class="PostHeader">
+<div class="PostHeader">
+<h2>Overview</h2>
+<div class = "seperator" style = "margin: 4px"> </div>
 A digital twin of Glasgow aimed at modelling the food environment within the city and examing how interventions could change it.
+Created in Unity and programmed in C#. For this project I was responsible for the 3D data views, Notification system and the district system.
 </div> 
 <div class = "seperator" style = "margin: 20px"> </div>
 
@@ -37,16 +40,27 @@ A digital twin of Glasgow aimed at modelling the food environment within the cit
 
 <div class="PageContent">
 <div class="postSectionLeft">
-    <p>Following on from the prototype we worked with Nesta and InGAME to take the project further. This resulted in a digitial twin mapping the food environment within Glasgow</p>
+<h2>The Project</h2>
+<p>This project was a continuation of the <a href="../NestaPrototype/index.html">prototype</a> we developed for Nesta and InGAME. This time the project was a playbox / proof of concept project with a similar goal of modelling food enviornments within citites. Dropping the sandbox aspect of the original prototype and grounding it in reality the resulting project was a digitial twin mapping the food environment within Glasgow</p>
 <img class="postSectionImg" src="../../images/Nesta_VHNC_2/Establishing Shot.png" style="border-radius: 3px;">
-<p>The project differed in terms of the mechanics/features quite drastically from the previous prototype. This meant I got to work on a lot of new things.</p>
-<img class="postSectionImgLeft" src="../../images/Nesta_VHNC_2/Heatmap.png" style="border-radius: 3px;">
-<p>The mechanics / feautres I ended up being responsible included:</p>
-<p>Data recording: One of the key mechanics of the playbox was being able to use the time slider to go back in time to view the digitial twin at different states as well as graph the data in 2D at the end.</p>
-<p>3D Data views: This included both heatmaps and the 3D bargraphs extending out of the relevant wards(Glasgow's term for subregions within the city). The 3D heatmap was especially difficult as the client didn't want the data being simulated on an individual level or to be tied specifically to houses. This just meant that data was simulated for a subregion such as "Govan". This meant having to find a way to consistently paint a heatmap by linking data to specific spots on the map within the relevant regions. The result is something I personally think could be improved and with more time I would've loved to experiment with different approaches / solutions to this problem.</p>
-<img class="postSectionImgRight" src="../../images/Nesta_VHNC_2/DataBreakdown.png" style="border-radius: 3px;">
-<p>Notifictions: When a major event happens within the simulation a notificaion is sent to be displayed in the UI, only 3 notifications can be displayed at a time so if a new notification is sent the oldest one is automatically removed. They can also be dismissed manually by the user in any order and they are animated to move up, slide in and slide out for the relevant actions.</p>
-<p> Districts and data panels: I created a tool to paint 2D polygons over the map so we could draw the region boundries that we were simulating within Glagsow. They fade in and out depending on the players zoom level and can be clicked on to pop open a data view window of the displaying current relevant statistics for that region.</p>
+<p>The project differed in terms of the mechanics/features quite drastically from the previous prototype. Additionally the team was much larger with two artists and four programmers along with design input from both InGAME and Nesta. This meant I got to work more in depth on features I developed in the protoype as well as focus on new features linking in with systems developed designed and developed by others:</p>
+<h2>My Role</h2>
+<h3>Data Recording</h3>
+<p>One of the core systems of the playbox was the data recording. There were various stats we wished to record such as calorie intake, location, weight, age etc. There were also stats, BMI, that needed to be displayed and thus calculated from the data so various helped functions were also built into the data recorder. The data produced by the playbox was required for various other systems so not only did it need to be able to record in realtime but also to be used by other systems again in realtime. A prime example of one of these systems was the time slider where as the simulation ran / when the simulation ended you could use a slider at the bottom to take a look at the food environment overtime to see how it changed. This meant that the data needed to be accessed and re-applied based on the date and physical location.</p>
+<h3>3D Data views</h3>
+<p>This included both heatmaps and the 3D bargraphs extending out of the relevant wards(Glasgow's term for subregions within the city). The 3D heatmap was especially difficult as the client didn't want the data being simulated on an individual level or to be tied specifically to houses. This just meant that data was simulated for a subregion such as "Govan". This meant having to find a way to consistently paint a heatmap by linking data to specific spots on the map within the relevant regions. The result is something I personally think could be improved and with more time I would've loved to experiment with different approaches / solutions to this problem.</p>
+<div class="postSectionImgBarDiv">
+    <div>
+        <img class="postSectionImg" src="../../images/Nesta_VHNC_2/Heatmap.png" style="border-radius: 3px;">
+    </div>
+    <div>
+        <img class="postSectionImg" src="../../images/Nesta_VHNC_2/DataBreakdown.png" style="border-radius: 3px;">
+    </div>
+</div>
+<h3>Notifictions</h3>
+<p>When a major event happens within the simulation a notificaion is sent to be displayed in the UI. This is a generic system to allow any type of event or notification to be displayed be it a BMI change in a sepcific regions or a policy being enacted. Only 3 notifications can be displayed at a time so if a new notification is sent the oldest one is automatically removed. They can also be dismissed manually by the user in any order and they are animated to move up, slide in and slide out for the relevant actions.</p>
+<h3>Districts and Data Panels</h3>
+<p>I created a tool to paint 2D polygons over the map so we could draw the region boundries that we were simulating within Glagsow. They fade in and out depending on the players zoom level and can be clicked on to pop open a data view window of the displaying current relevant statistics for that region. This was one of my favourite features to create as I hadn't got a lot of opportunity to create tools within Unity or work with visual effects.</p>
 </div>
 </div>
         </main>

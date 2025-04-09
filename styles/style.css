@@ -129,30 +129,24 @@ html {
     outline: var(--border-thickness) solid;
     padding: var(--padding);
     border-radius: 3px;
-    display: flex;
-    align-items:flex-start;
     width: var(--content-secondary-width);
+    overflow: auto;
 }
 
-.About p {
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
 
 .AboutImg {
     max-height: 30%;
     max-width: 30%;
     flex-shrink: 2;
+    margin-right: var(--margin);
     object-fit: contain;
+    float: left;
 }
 
 .Bio {
-    overflow-wrap: normal;
-    margin-left: var(--margin);
-    display: flex;
     margin-block-start: 0%;
     margin-block-end: 0%;
-    align-items: center;
+    /* align-items: center; */
 }
 
 
@@ -185,8 +179,8 @@ html {
 .mySlides
 {
     position: relative;
-    width: 80%;
-    height: 80vh;
+    width: var(--slideShow-width);
+    height: var(--slideShow-height);
     min-height: fit-content; 
     border-radius: 3px;
     border: var(--border-thickness) solid;
@@ -240,7 +234,7 @@ html {
     width: 33px;
     background-color: var(--secondary-colour);
     border-color: var(--main-colour);
-    border-radius: 15px;
+    border-radius: 5px;
     border: 3px;
     border-style: solid;
     transition: background-color 0.6s ease;
@@ -255,7 +249,7 @@ html {
     background-color: var(--main-colour);
     color: var(--secondary-colour);
     transition: background-color 0.6s ease;
-    border-radius: 15px;
+    border-radius: 5px;
     border: 3px;
     border-style: solid;
     margin: var(--half-padding);
@@ -290,31 +284,67 @@ html {
 }
 
 /* Posts */
+@keyframes shrink {
+    from {
+        height: 100%
+    }
 
+    to {
+        height: 15%
+    }
+}
 .postContent{
+    width: 100%;
+    height: 15%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    height: 100%;
-}
-.postContent h2 {
-    margin-bottom: var(--padding);
+    align-items: left;
+    /* white-space: pre-wrap; */
+    overflow: hidden;
+    color: var(--secondary-colour-off);
+    padding: var(--padding);
+    background-color: var(--main-colour-off-alpha);
+    align-self: end;
+    text-overflow: ellipsis;
+    animation-name: shrink;
+    animation-duration: 1s;
 }
 
-.postContent p {
-    margin: 0;
-    margin-left: var(--padding);
+@keyframes grow {
+    from {
+        height: 15%
+    }
+
+    to {
+        height: 100%
+    }
+}
+
+
+.postLink:hover ~ .postContent
+{
+    height: 100%;
+    animation-name: grow;
+    animation-duration: 1s;
+}
+
+
+.postSubText
+{
+    margin: 0px;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .post{
     background-color: var(--secondary-colour-off);
     margin: var(--margin) var(--half-padding) var(--half-padding) var(--margin);
-    padding: var(--padding);
     margin-bottom: 0px;
     outline: var(--border-thickness) solid;
     border-radius: 3px; 
     width: var(--content-width);
-    height: 300px;
+    height: var(--post-height);
     position: relative;
     overflow-y: clip;
 
@@ -336,12 +366,7 @@ html {
     flex-shrink: 2;
     object-fit: contain;
 }
-.postText
-{
-    display: flex;
-        flex-direction: row;
-    overflow-y: clip;
-}
+
 .postSection {
     display: flex;
     flex-flow: wrap;
@@ -351,4 +376,21 @@ html {
 .theme {
     color: var(--main-colour);
     background-color: var(--secondary-colour);
+}
+
+.technical
+{
+    display: flex;
+    flex-direction: row;
+    /* outline: var(--border-thickness) solid;
+    border-radius: 3px; */
+    margin: var(--margin);
+}
+
+.technical p
+{
+    padding: var(--half-padding);
+    margin: var(--padding);
+    outline: var(--border-thickness) solid;
+    border-radius: 3px; 
 }

@@ -1,6 +1,10 @@
 .timeline{
-    width: 50%;
+    width: var(--content-width);
     padding: var(--padding);
+}
+.ignoreTimeline ul li
+{
+    list-style-type: circle;
 }
 .timeline ul{
     list-style-type:none;
@@ -66,13 +70,23 @@
 {
     width: var(--content-width);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content:space-between;
 }
 
 .generalAbout
 {
-    width: 50%;
+
     flex-shrink: 1;
     padding: var(--padding);
 }
+
+.generalAboutImage
+{
+    width: 80%;
+    object-fit: contain;
+    justify-self: center;
+    align-items: inherit;
+    display: flex;
+    margin: var(--padding);
+    }
