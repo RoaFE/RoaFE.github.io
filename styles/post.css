@@ -1,5 +1,10 @@
 @import './constants.css';
 
+h2
+{
+    border-bottom: var(--main-colour) solid var(--border-thickness);
+    padding-bottom: var(--half-padding);
+}
 
 .PostHeader
 {
@@ -9,6 +14,12 @@
     text-align:justify;
     text-justify: newspaper;
     padding: var(--padding);
+}
+
+.PostHeaderContent
+{
+    margin-top: var(--margin);
+    margin-bottom: var(--margin);
 }
 
 .PostContent
