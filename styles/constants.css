@@ -13,12 +13,23 @@
 
 
 
+@media screen and (min-width : 10px)
+{
+    :root
+    {
+        --slideShow-height: 44vw;
+        --slideShow-width: 70vw;
+        --post-height: 60vw;
+        --content-width: 98%;
+        --content-secondary-width: 98%;
+    }
+}
 @media screen and (min-width : 100px)
 {
     :root
     {
-        --slideShow-height: 120vw;
-        --slideShow: 80vw;
+        --slideShow-height: 44vw;
+        --slideShow-width: 70vw;
         --post-height: 60vw;
         --content-width: 98%;
         --content-secondary-width: 98%;

@@ -121,6 +121,7 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 
 /* About */
@@ -164,19 +165,82 @@ html {
     transition: background-image 0.6s ease;
 }
 
-.slideContent
+@media screen and (min-width : 100px)
 {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    white-space: pre-wrap;
-    overflow: hidden;
-    color: var(--secondary-colour-off);
-    padding: var(--padding);
-    background-color: var(--main-colour-off-alpha);
-    align-self: end;
+    .slideContent p
+    {
+        visibility: hidden;
+        font-size: 0px;
+        margin: 0px;
+    }
+    .slideContent h1
+    {
+        font-size: medium;
+        margin: var(--half-padding);
+        margin-bottom: 0px;
+    }
+    .slideContent
+    {
+        max-height: 22%;
+        padding: var(4px);
+        width: 100%;
+        min-width: var(--slideShow-width);
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        white-space: pre-wrap;
+        overflow: hidden;
+        color: var(--secondary-colour-off);
+        background-color: var(--main-colour-off-alpha);
+        align-self: end;
+    }
 }
+@media screen and (min-width : 400px)
+{
+    .slideContent
+    {
+        max-height: 100%;
+    }
+    .slideContent p
+    {
+        visibility: hidden;
+        font-size: 0px;
+    }
+    .slideContent h1
+    {
+        font-size: large;
+    }
+}
+@media screen and (min-width : 700px)
+{
+    .slideContent
+    {
+        max-height: 100%;
+    }
+    .slideContent p
+    {
+        visibility: visible;
+        font-size: 16px;
+        margin: var(--half-padding);
+    }
+    
+    .slideContent h1
+    {
+        /* margin-top: var(--margin); */
+        font-size: 32px;
+    }
+}
+@media screen and (min-width : 1000px)
+{
+    .slideContent h1
+    {
+        /* margin-top: var(--margin); */
+        font-size: 32px;
+    }
+}
+
+
+
 
 .mySlides
 {
@@ -205,7 +269,7 @@ html {
     max-height: 90%;
     max-width: 100%;
     flex-shrink: 1;
-    /* object-fit: contain; */
+    object-fit: contain;
 }
 .highlightContent
 {
@@ -383,7 +447,9 @@ html {
 .technical
 {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
+    justify-content: center;
     /* outline: var(--border-thickness) solid;
     border-radius: 3px; */
     margin: var(--margin);
