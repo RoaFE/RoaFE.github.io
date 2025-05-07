@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Project Highlands Prototype</title>
-        <meta name="description" content="A prototype for an original IP from Konglomerate games about exploring the scottish highlands.">
+        <title>Unannounced Original IP</title>
+        <meta name="description" content="An unannounced project for an original IP from Konglomerate Games.">
         <meta name="generator" content="Eleventy v2.0.1">
         <link rel="stylesheet" href="/styles/style.css">
         <style>
@@ -26,13 +26,13 @@
 			</nav>
         </header>
         <main class = "main">
-            <h1>Project Highlands Prototype</h1>
+            <h1>Unannounced Original IP</h1>
             <link rel="stylesheet" href="/styles/post.css">
 <div class="PostHeader">
 <h2>Overview</h2>
 <div class="PostHeaderContent">
-A prototype for an original IP from Konglomerate games about exploring the scottish highlands.
-
+An unannounced project for an original IP from Konglomerate Games.
+Starting from the last quarter of 2023 I have worked with the whole team, and at some times alone, on this project. Due to the size of the team I have had to do a variety of work including but not limited to: Prototyping and polishing gameplay mechanics, visual effects, AI, UI, UX, creating internal tools for development and optimisation.
 </div> 
 </div> 
 
@@ -42,11 +42,20 @@ A prototype for an original IP from Konglomerate games about exploring the scott
 <div class="PageContent">
 <div class="postSectionLeft">
 
-<img class="postSectionImgLeft" src="../../images/ProjectHighlands/River.png" style="border-radius: 3px;">
-<p>Since we are a small team at konglomerate usually we have to do a bit of everything however, for Project highlands we were allowed to specialise into more specific fields within the programming team. Since I hadn't got much of a chance to do much graphical programming I volunteered to create any relevant shaders and related tools. This had me working with the art department to develop the visual effects they wanted. Along with this I got to experiment with my own ideas and effects while sticking to the style guide created by the artists.</p>
-<img class="postSectionImg" src="../../images/ProjectHighlands/Cover.png" style="border-radius: 3px;">
-<p>So far I've created / prototyped the following: Painted post processing effect (kuwahara filter), Water shader, Grass painter tool which then generates grass with a compute shader, leaf particles, foilage wind movement, and a river creation tool.</p>
-<img class="postSectionImg" src="../../images/ProjectHighlands/PostProcessingOnAndOff.png" style="border-radius: 3px;">
+<h2> Summary </h2>
+<p>Since the project is still unannounced I can't go into specifics but I can go into my role on the project and contributions. At the end of 2023 I kicked off this project as the only programmer and was responsible for setting up the core architecture and the initial game systems prototyping the original mechanics.</p>
+<p>Since then I have worked on almost every aspect as one of two programmers on the project. Due to the nature of the company we would have to hop on and off this project to perform contract work which meant there were chunks of time where I was working solely on the project.</p>
+<h2>My Contributions</h2>
+<h3>Gameplay</h3>
+<p>There are many aspects of gameplay that I have prototyped, iterated and polished on this project. A perfect example would be the character controller. Having to kick the project off myself I created the original first person character controller. At a later date we shifted to 3rd person so I iterated on the character controller to work in 3rd person. From feedback from playtests and design the character controller was iterated on to try improve the robustness and feel of the character. When some of the main mechanics had to be reworked it became apparent that the character controller needed to become more flexible. Me and the other programmer got together to recreate the character controller from scratch and during our planning we came up with the module system where we could create movement, aiming, animation modules that we could activate and deactivate to dicate the movement of the character. As an example we could have the standard free aim setup which would allow the player to run around and move the camera around where the character model would face the direction of movement. Upon entering water we could then activate the swimming module which would swap out the animations and the movement modules to play the swimming animations and updated movement. We could then activate the aiming module if the player picked up an object to throw etc etc.
+<h3>Visual effects</h3>
+<p>Working with the lead artist on the project I created a variety of visual effects through the use of particle systems and custom shaders.
+<h3>Tools</h3>
+<p>To help with development I created several internal tools to allow better development and iteration. One such tool was a gameobject painter inside the editor to let the designer and artist more easily decorate the environments which had settings various settings to place lots of props quickly while randomising the looks if specified. The tool I'm most proud of is the debug console developed in the game. Based off of a <a href="https://www.youtube.com/watch?v=VzOEM-4A2OM&t=65s&ab_channel=GameDevGuide">tutorial</a> from Game Dev Guide. From this I added some quality of life updates including an auto complete, being able to scroll through previously entered commands and a log dynamic log which further information could be outputted to. I also implemented a generic package structure to house commands to better organise any commands created in code. This would also allow us to take relevant packages of commands and implement them in other projects in the future.
+<h3>UI and UX</h3>
+<p>Through the use of tweening I helped create responsive dynamic UI. My favourite feature I worked on recently was an in world prompt system for the first time user experience (FTUE). This allowed us to set up a chain of prompts triggered by conditions to guide the player through the game without the need for bulky text boxes and pop ups. As an example when unlocking a new piece of equipment, the equipment icon would pulse in the equipment UI. Additionally a in world UI prompt with the same icon would appear over the gameobject in world that the equipment would meant to be used on. Upon equipping the equipment the in world prompt would update to display the relevant button press required. I made this system to be as generic as possible to allow us complete flexibility with displayed prompts be it from button presses to pips in world to just information to be displayed to the user.
+<h2> Retrospect </h2>
+<p>This is one of the biggest projects I've worked on and the longest project I've worked on. Due to this I have made various mistakes that I have learned from ranging from implementation to internal communications amongst the team.</p>
 </div>
 </div>
         </main>
