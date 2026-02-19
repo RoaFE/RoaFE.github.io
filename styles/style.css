@@ -7,21 +7,32 @@
 
 p {
     overflow-wrap: break-word;
+    margin: 0px;
 }
-
+h1,
 h2 {
     margin: 0;
 }
 
-h1,
+
 h3 {
     margin: 0;
     margin-top: var(--margin);
 }
 
-header:after {
+/* header:after {
     content: "";
     clear: both;
+} */
+
+.headerLeft
+{
+    color: var(--secondary-colour);
+}
+
+.headerRight
+{
+    color: var(--secondary-colour);
 }
 
 /* Header */
@@ -34,11 +45,12 @@ header {
     gap: 1em .5em;
     flex-wrap: wrap;
     padding: var(--padding);
+    margin-bottom: var(--margin);
     width: 100%;
     align-content: center;
-    justify-content: center;
-    background-color: var(--secondary-colour);
-    border-bottom: var(--border-thickness) solid;
+    justify-content: space-between;
+    background-color: var(--main-colour);
+    /* border-bottom: var(--border-thickness) solid; */
 }
 
 
@@ -77,24 +89,53 @@ header {
     list-style: none;
 }
 .nav-item {
-    margin-right: var(--margin);
+    margin-right: var(--padding);
+    margin-left: var(--padding);
 }
 
 .nav-item a[href]:not(:hover) {
-    color: var(--main-colour);
+    color: var(--secondary-colour);
     text-decoration: none;
 }
 .nav-item a[href]:visited {
-    color: var(--main-colour);
     text-decoration: none;
-}
-.nav-item a[href] :hover {
-    color: var(--main-colour-off);
+    
 }
 
 .nav a[href][aria-current="page"] {
-    text-decoration: underline;
+    font-weight: bold;
+    color: var(--secondary-colour-off);
+}
+.nav-item a[href]:hover {
     color: var(--main-colour-off);
+    font-weight: bold;
+    text-decoration: none;
+}
+/* Socials */
+.socials {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.social-item {
+    height: 1.6em;
+    width: 1.6em;
+    margin-left: var(--half-padding);
+    fill: var(--secondary-colour);
+}
+
+.social-item a[href]:not(:hover), .social-item svg:not(:hover) {
+    fill: var(--secondary-colour);
+    text-decoration: none;
+}
+.social-item a[href]:visited, .social-item svg:visited  {
+    fill: var(--main-colour-off);
+    text-decoration: none;
+}
+.social-item a[href]:hover, .social-item svg:hover {
+    color: var(--secondary-colour-off);
+    fill: var(--main-colour-off);
 }
 
 html,
@@ -104,7 +145,15 @@ body {
 
 html {
     margin: var(--margin);
+    margin-top: 26px;
     /* display: table; */
+}
+
+.title
+{
+    /* background-color: var(--main-colour-off); */
+    width: 100%;
+    justify-items: center;
 }
 
 .main {
@@ -112,6 +161,7 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-top: var(--margin);
 }
 
 .PageContent {
@@ -119,6 +169,7 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 
 /* About */
@@ -162,19 +213,82 @@ html {
     transition: background-image 0.6s ease;
 }
 
-.slideContent
+@media screen and (min-width : 100px)
 {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    white-space: pre-wrap;
-    overflow: hidden;
-    color: var(--secondary-colour-off);
-    padding: var(--padding);
-    background-color: var(--main-colour-off-alpha);
-    align-self: end;
+    .slideContent p
+    {
+        visibility: hidden;
+        font-size: 0px;
+        margin: 0px;
+    }
+    .slideContent h1
+    {
+        font-size: medium;
+        margin: var(--half-padding);
+        margin-bottom: 0px;
+    }
+    .slideContent
+    {
+        max-height: 22%;
+        padding: var(4px);
+        width: 100%;
+        min-width: var(--slideShow-width);
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        white-space: pre-wrap;
+        overflow: hidden;
+        color: var(--secondary-colour-off);
+        background-color: var(--main-colour-off-alpha);
+        align-self: end;
+    }
 }
+@media screen and (min-width : 400px)
+{
+    .slideContent
+    {
+        max-height: 100%;
+    }
+    .slideContent p
+    {
+        visibility: hidden;
+        font-size: 0px;
+    }
+    .slideContent h1
+    {
+        font-size: large;
+    }
+}
+@media screen and (min-width : 700px)
+{
+    .slideContent
+    {
+        max-height: 100%;
+    }
+    .slideContent p
+    {
+        visibility: visible;
+        font-size: 16px;
+        margin: var(--half-padding);
+    }
+    
+    .slideContent h1
+    {
+        /* margin-top: var(--margin); */
+        font-size: 32px;
+    }
+}
+@media screen and (min-width : 1000px)
+{
+    .slideContent h1
+    {
+        /* margin-top: var(--margin); */
+        font-size: 32px;
+    }
+}
+
+
+
 
 .mySlides
 {
@@ -203,7 +317,7 @@ html {
     max-height: 90%;
     max-width: 100%;
     flex-shrink: 1;
-    /* object-fit: contain; */
+    object-fit: contain;
 }
 .highlightContent
 {
@@ -381,7 +495,9 @@ html {
 .technical
 {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
+    justify-content: center;
     /* outline: var(--border-thickness) solid;
     border-radius: 3px; */
     margin: var(--margin);
@@ -393,4 +509,42 @@ html {
     margin: var(--padding);
     outline: var(--border-thickness) solid;
     border-radius: 3px; 
+}
+.technical p:hover
+{
+    background-color: var(--main-colour);
+    color: var(--secondary-colour);
+    outline: var(--border-thickness) solid;
+    cursor: none;
+}
+
+.button
+{
+    justify-self: center;
+}
+.buttonVisuals
+{
+    background-color: var(--main-colour-off);
+    justify-self: center;
+    padding: var(--padding);
+    border-radius: 3px;
+}
+
+.button a
+{
+    color : var(--secondary-colour);
+}
+.button a:visited, .button a:hover
+{
+    color : var(--secondary-colour-off);
+}
+.buttonVisuals:hover
+{
+    color : var(--secondary-colour-off);
+    background-color: var(--main-colour);
+}
+
+.buttonVisuals h3
+{
+    margin-top: 0px;
 }
