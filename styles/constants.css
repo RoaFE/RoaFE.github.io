@@ -11,6 +11,15 @@
     --secondary-colour-off: #f8f5d4;
 }
 
+body.dark
+{
+    --main-colour: #ff7373;
+    --main-colour-off: #cf4343;
+    --main-colour-off-alpha: #cf4343b0;
+    --secondary-colour: #09293b;
+    --secondary-colour-off: #012234;
+}
+
 
 
 @media screen and (min-width : 10px)
