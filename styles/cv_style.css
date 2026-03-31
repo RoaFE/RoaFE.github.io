@@ -1,0 +1,84 @@
+/* src/css/style.css */
+:root {
+  --primary-color: #008080;
+  --accent-color: #005050;
+  --background-colour: #f8f4d4;
+
+  margin: 0 0 0 0;
+}
+
+h1 {
+  margin: 0 0 .2em 0;
+}  
+
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  color: var(--primary-color);
+  background-color: var(--background-colour);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+h2 {
+  border-bottom: 2px solid var(--accent-color);
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+h3 {
+  margin: 0 0 .1em 0;
+}
+
+h4 {
+  margin: 0 0 .3em 0;
+}
+
+ul {
+  margin: 0 0 0 0;
+}
+
+p {
+  margin: 0 0 0 0;
+}
+
+.info {
+  font-weight: bold;
+  margin: 0 0 .1em 0;
+  width: 100%;
+  text-align: justify;
+}
+
+.job {
+  margin: 0 0 1em 0;
+}
+
+.qualification {
+  margin: 0 0 1em 0;
+}
+
+.add_experience{
+  margin: 0 0 1em 0;
+}
+
+@media print {
+  body {
+    padding: 0.5cm;
+    font-size: 10pt; /* Standard resume font size */
+  }
+  .page-break { break-after: page; }
+  .post-page-break { padding-top: 0.5cm }
+  
+  .no-print {
+    display: none;
+  }
+
+  @page {
+    margin: 0cm;
+    background-color: var(--background-colour);
+    color : var(--background-colour);
+  }
+  
+}
